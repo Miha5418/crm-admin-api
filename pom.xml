@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.crm</groupId>
-    <artifactId>crm-api</artifactId>
+    <groupId>ru.crm.admin-api</groupId>
+    <artifactId>crm-admin-api</artifactId>
     <version>1.0</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <parent>
@@ -91,8 +91,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
 
@@ -115,33 +115,6 @@
                             <library>spring-boot</library>
                             <apiPackage>ru.crm.rest.admin.openapi.support</apiPackage>
                             <modelPackage>ru.crm.rest.admin.openapi.model</modelPackage>
-                            <generateApiTests>false</generateApiTests>
-                            <generateModelTests>false</generateModelTests>
-                            <generateApiDocumentation>false</generateApiDocumentation>
-                            <generateModelDocumentation>false</generateModelDocumentation>
-                            <configOptions>
-                                <delegatePattern>true</delegatePattern>
-                                <name>crm</name>
-                                <dateLibrary>java8</dateLibrary>
-                            </configOptions>
-                            <typeMappings>OffsetDateTime=Instant</typeMappings>
-                            <importMappings>
-                                java.time.OffsetDateTime=java.time.Instant,Page=org.springframework.data.domain.Pageable
-                            </importMappings>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>user</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/openapi/open-api-user.yaml</inputSpec>
-                            <output>${project.build.directory}/generated-sources</output>
-                            <generatorName>spring</generatorName>
-                            <library>spring-boot</library>
-                            <apiPackage>ru.crm.rest.admin.user.openapi.api</apiPackage>
-                            <modelPackage>ru.crm.rest.admin.user.openapi.model</modelPackage>
                             <generateApiTests>false</generateApiTests>
                             <generateModelTests>false</generateModelTests>
                             <generateApiDocumentation>false</generateApiDocumentation>
