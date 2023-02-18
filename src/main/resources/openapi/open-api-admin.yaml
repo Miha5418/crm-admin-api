@@ -17,7 +17,7 @@ servers:
     description: Test server
 
 paths:
-  /admin/auth/login:
+  /auth/login:
     post:
       description: Вход пользователя
       operationId: login
@@ -45,7 +45,7 @@ paths:
         401:
           description: Пользователь ввел неверный адрес и/или пароль
 
-  /admin/client/create:
+  /client/create:
     post:
       description: Создание дового клиента
       operationId: addNewClient
@@ -75,7 +75,7 @@ paths:
         401:
           description: Пользователь не авторизирован
 
-  /admin/client:
+  /client:
     get:
       description: Получение списка клиентов
       operationId: getListClientInfo
@@ -101,7 +101,7 @@ paths:
         401:
           description: Пользователь не авторизирован
 
-  /admin/client/{clientId}:
+  /client/{clientId}:
     get:
       description: Получение одного клиента
       operationId: getClientInfoById
