@@ -259,16 +259,16 @@ components:
       description: Информация о клиенте для создания и отображения
       type: object
       required:
+        - firstName
         - lastName
-        - surName
         - memberShipNumber
       properties:
-        lastName:
+        firstName:
           description: имя клиента
           type: string
           maximum: 1
           maxLength: 250
-        surName:
+        lastName:
           description: фамилия клиента
           type: string
           maximum: 1
