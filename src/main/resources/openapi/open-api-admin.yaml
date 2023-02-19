@@ -7,13 +7,13 @@ info:
     name: Karpeykin
 
 servers:
-  - url: 'http://localhost:8080'
+  - url: 'http://localhost:9001'
     description: Development server
-  - url: 'http://localhost:8080'
+  - url: 'http://localhost:9001'
     description: Local run server
-  - url: 'http://localhost:8080'
+  - url: 'http://localhost:9001'
     description: Productive server
-  - url: 'http://localhost:8080'
+  - url: 'http://localhost:9001'
     description: Test server
 
 paths:
@@ -138,7 +138,7 @@ components:
       required: true
       schema:
         type: integer
-        format: int32
+        format: int64
 
     pageParams:
       in: query
@@ -285,7 +285,6 @@ components:
           description: Номер абонемента
           type: integer
           format: int64
-
         mail:
           description: Адрес электронной почты
           type: string
