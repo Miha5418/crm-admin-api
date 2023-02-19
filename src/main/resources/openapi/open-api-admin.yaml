@@ -271,7 +271,7 @@ components:
           type: string
           maximum: 1
           maxLength: 250
-        midleName:
+        middleName:
           description: отчество клиента
           type: string
           maximum: 1
