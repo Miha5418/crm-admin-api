@@ -283,7 +283,9 @@ components:
           maxLength: 11
         memberShipNumber:
           description: Номер абонемента
-          type: string
+          type: integer
+          format: int64
+
         mail:
           description: Адрес электронной почты
           type: string
