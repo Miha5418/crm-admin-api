@@ -127,6 +127,24 @@ paths:
         401:
           description: Пользователь не авторизирован
 
+  /mail/send:
+    post:
+      description: Отправка рассылки
+      operationId: mail
+      tags:
+        - Mail
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Mail"
+      responses:
+        200:
+          description: Рассылка отправлена
+        401:
+          description: Необходима авторизация
+
 components:
 
   parameters:
@@ -252,6 +270,17 @@ components:
           type: string
           minLength: 10
           maxLength: 300
+
+    Mail:
+      description: Сообщение для рассылки
+      type: object
+      properties:
+        isActive:
+          description: Активныи или не активным клиентам
+          type: boolean
+        message:
+          description: Сообщение для отправки
+          type: string
 
     ClientInfo:
       description: Информация о клиенте для создания и отображения
