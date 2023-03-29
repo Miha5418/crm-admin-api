@@ -282,6 +282,17 @@ components:
           description: Сообщение для отправки
           type: string
 
+    KafkaMessage:
+      description: Сообщение для отправки в Kafka
+      type: object
+      properties:
+        clientTelegramId:
+          description: Идентификатор пользователя в Telegram
+          type: string
+        message:
+          description: Сообщение
+          type: string
+
     ClientInfo:
       description: Информация о клиенте для создания и отображения
       type: object
